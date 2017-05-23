@@ -13,6 +13,5 @@ before_install:
 script:
 - travis_wait 40 docker run --cap-add=SYS_ADMIN davidva/unibuild /bin/sh /urpms -g UnitedRPMs/gstreamer1-plugins-base -s gstreamer1-plugins-base.spec -t unitedrpms-24-i386 -c true -u true
 notifications:
-# email: davidva@tutanota.com
   slack: unitedrpms:lzDykHTpajKrgmGz9NkrO1Hj
 
