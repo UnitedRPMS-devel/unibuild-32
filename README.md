@@ -2,7 +2,7 @@
 
 ### Shippable 
 
-
+[![Run Status](https://api.shippable.com/projects/59233c4511025e070032220d/badge?branch=master)](https://app.shippable.com/github/UnitedRPMs/unibuild-32)
 
 
 ### Travis 
