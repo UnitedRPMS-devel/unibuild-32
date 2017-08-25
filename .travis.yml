@@ -9,9 +9,9 @@ before_install:
   - echo 'DOCKER_OPTS="-H tcp://127.0.0.1:2375 -H unix:///var/run/docker.sock -s devicemapper"' | sudo tee /etc/default/docker > /dev/null
   - sudo service docker restart
   - sleep 5
-  - sudo docker pull davidva/unibuild
+  - sudo docker pull davidva/unibuild-28
 script:
-- travis_wait 40 docker run --cap-add=SYS_ADMIN davidva/unibuild /bin/sh /urpms -g UnitedRPMs/libva-intel-driver -s libva-intel-driver.spec -t unitedrpms-25-i386 -c true -u true 
+- travis_wait 40 docker run --cap-add=SYS_ADMIN davidva/unibuild-28 /bin/sh /urpms -g UnitedRPMs/libva-intel-driver -s libva-intel-driver.spec -t unitedrpms-27-i386 -c true -u true 
 notifications:
   webhooks:
     urls:
