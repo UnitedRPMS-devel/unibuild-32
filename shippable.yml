@@ -24,7 +24,7 @@ build:
 
 # the build scripts
 script:
-- docker run --privileged=true --cap-add=SYS_ADMIN -v $(pwd):/root/enjoy/ davidva/unibuild-28 /bin/sh /urpms -g UnitedRPMs/libva-intel-driver -s libva-intel-driver.spec -t unitedrpms-rawhide-i386  
+- docker run --privileged=true --cap-add=SYS_ADMIN -v $(pwd):/root/enjoy/ davidva/unibuild-28 /bin/sh /urpms -g UnitedRPMs/libva-intel-driver -s libva-intel-driver.spec -t unitedrpms-27-i386 -c true  
 
 notifications:
 slack: unitedrpms:lzDykHTpajKrgmGz9NkrO1Hj
