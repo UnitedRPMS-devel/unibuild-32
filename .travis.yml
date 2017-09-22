@@ -11,7 +11,7 @@ before_install:
   - sleep 5
   - sudo docker pull davidva/unibuild-28
 script:
-- travis_wait 40 && docker run --cap-add=SYS_ADMIN davidva/unibuild-26 /bin/sh -c "rm -f urpms && wget -c https://raw.githubusercontent.com/kuboosoft/united-build/master/urpms && chmod a+x urpms && /urpms -g UnitedRPMs/gstreamer1-plugins-base -s gstreamer1-plugins-base.spec -t unitedrpms-26-i386 -u true -c true"
+- travis_wait 40 && docker run --cap-add=SYS_ADMIN davidva/unibuild-26 /bin/sh -c "rm -f urpms && wget -c https://raw.githubusercontent.com/kuboosoft/united-build/master/urpms && chmod a+x urpms && /urpms -g UnitedRPMs/gstreamer1-plugins-base -s gstreamer1-plugins-base.spec -t unitedrpms-27-i386 -u true -c true"
 notifications:
 notifications:
   webhooks:
