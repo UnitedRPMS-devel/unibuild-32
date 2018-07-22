@@ -4,7 +4,7 @@ sudo: required
 services:
 - docker
 script:
-- travis_wait 40 && docker run --cap-add=SYS_ADMIN davidva/unibuild-28 /bin/sh -c "rm -f urpms && wget -c https://raw.githubusercontent.com/kuboosoft/united-build/master/urpms && chmod a+x urpms && /urpms -g UnitedRPMs/gstreamer1 -s gstreamer1.spec -t unitedrpms-28-i386 -u true -c true"
+- travis_wait 40 && docker run --cap-add=SYS_ADMIN davidva/unibuild-28 /bin/sh -c "rm -f urpms && wget -c https://raw.githubusercontent.com/kuboosoft/united-build/master/urpms && chmod a+x urpms && /urpms -g UnitedRPMs/gstreamer1 -s gstreamer1.spec -t unitedrpms-26-i386 -u true -c true"
 notifications:
 notifications:
   webhooks:
