@@ -9,7 +9,7 @@ install: true
 
 build:
   pre_ci_boot:
-    image_name: davidva/unibuild-28
+    image_name: davidva/unibuild-30
     image_tag: latest
     pull: true
     env: LM=ML 
@@ -20,11 +20,11 @@ build:
     # Here you'd place anything you want to test. 
 #    - rm -f /urpms
 #    - wget -c https://raw.githubusercontent.com/kuboosoft/united-build/master/urpms && chmod a+x urpms
-#    - /urpms -g UnitedRPMs/gn -s gn.spec -t fedora-25-x86_64
+#    - /urpms -g UnitedRPMs/gstreamer1-plugins-base -s gstreamer1-plugins-base.spec -t fedora-25-x86_64
 
 # the build scripts
 script:
-- docker run --privileged=true --cap-add=SYS_ADMIN -v $(pwd):/root/enjoy/ davidva/unibuild-30 /bin/sh -c "rm -f urpms && wget -c https://raw.githubusercontent.com/kuboosoft/united-build/master/urpms && chmod a+x urpms && /urpms -g UnitedRPMs/gn -s gn.spec -t unitedrpms-rawhide-x86_64 -u true"   
+- docker run --privileged=true --cap-add=SYS_ADMIN -v $(pwd):/root/enjoy/ davidva/unibuild-30 /bin/sh -c "rm -f urpms && wget -c https://raw.githubusercontent.com/kuboosoft/united-build/master/urpms && chmod a+x urpms && /urpms -g UnitedRPMs/gstreamer1-plugins-base -s gstreamer1-plugins-base.spec -t unitedrpms-28-x86_64 -c true -w true"   
 
 notifications:
 slack: unitedrpms:lzDykHTpajKrgmGz9NkrO1Hj
