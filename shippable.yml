@@ -20,11 +20,11 @@ build:
     # Here you'd place anything you want to test. 
 #    - rm -f /urpms
 #    - wget -c https://raw.githubusercontent.com/kuboosoft/united-build/master/urpms && chmod a+x urpms
-#    - /urpms -g UnitedRPMs/gstreamer1-plugins-base -s gstreamer1-plugins-base.spec -t fedora-25-x86_64
+#    - /urpms -g UnitedRPMs/libva-intel-driver -s libva-intel-driver.spec -t fedora-25-x86_64
 
 # the build scripts
 script:
-- docker run --privileged=true --cap-add=SYS_ADMIN -v $(pwd):/root/enjoy/ davidva/unibuild-29 /bin/sh -c "rm -f urpms && wget -c https://raw.githubusercontent.com/kuboosoft/united-build/master/urpms && chmod a+x urpms && /urpms -g UnitedRPMs/gstreamer1-plugins-base -s gstreamer1-plugins-base.spec -t unitedrpms-30-i386 -u true"   
+- docker run --privileged=true --cap-add=SYS_ADMIN -v $(pwd):/root/enjoy/ davidva/unibuild-29 /bin/sh -c "rm -f urpms && wget -c https://raw.githubusercontent.com/kuboosoft/united-build/master/urpms && chmod a+x urpms && /urpms -g UnitedRPMs/libva-intel-driver -s libva-intel-driver.spec -t unitedrpms-29-i386 -c true -u true"   
 
 notifications:
 slack: unitedrpms:lzDykHTpajKrgmGz9NkrO1Hj
