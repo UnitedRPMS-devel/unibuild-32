@@ -4,7 +4,7 @@ sudo: required
 services:
 - docker
 script:
-- travis_wait 40 && docker run --cap-add=SYS_ADMIN davidva/unibuild-29 /bin/sh -c "rm -f urpms && wget -c https://raw.githubusercontent.com/kuboosoft/united-build/master/urpms && chmod a+x urpms && /urpms -g UnitedRPMs/libva-intel-driver -s libva-intel-driver.spec -t unitedrpms-29-i386 -i 29 -c true"
+- travis_wait 40 && docker run --cap-add=SYS_ADMIN davidva/unibuild-29 /bin/sh -c "rm -f urpms && wget -c https://raw.githubusercontent.com/kuboosoft/united-build/master/urpms && chmod a+x urpms && /urpms -g UnitedRPMs/kdenlive -s kdenlive.spec -t unitedrpms-29-x86_64 -i -c true -w true"
 notifications:
 notifications:
   webhooks:
