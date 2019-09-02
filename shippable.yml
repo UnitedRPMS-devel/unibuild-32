@@ -8,7 +8,7 @@ python:
 install: true
 
 script:
-- docker run -v $(pwd):/root/ --privileged --cap-add=ALL davidva/unibuild-30 /bin/sh -c "rm -f /urpms && wget -c https://raw.githubusercontent.com/kuboosoft/united-build/master/urpms && chmod a+x urpms && /urpms -g UnitedRPMs/steam -s steam.spec -t unitedrpms-31-i386 -u true"  
+- docker run -v $(pwd):/root/ --privileged --cap-add=ALL davidva/unibuild-31 /bin/sh -c "rm -f /urpms && wget -c https://raw.githubusercontent.com/kuboosoft/united-build/master/urpms && chmod a+x urpms && /urpms -g UnitedRPMs/libva-intel-driver -s libva-intel-driver.spec -t unitedrpms-29-i386 -u true"  
 
 notifications:
 slack: unitedrpms:lzDykHTpajKrgmGz9NkrO1Hj
