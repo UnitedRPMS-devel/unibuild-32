@@ -24,7 +24,7 @@ install: true
 
 # the build scripts
 script:
-- docker run -v $(pwd):/root/ --privileged --cap-add=ALL davidva/unibuild-31 /bin/bash -c "rm -f urpms && wget -c https://raw.githubusercontent.com/kuboosoft/united-build/master/urpms && chmod a+x urpms && /urpms -g UnitedRPMs/gstreamer1 -s gstreamer1.spec -t unitedrpms-32-i386 -c true -u true"   
+- docker run -v $(pwd):/root/ --privileged --cap-add=ALL davidva/unibuild-31 /bin/bash -c "rm -f urpms && wget -c https://raw.githubusercontent.com/kuboosoft/united-build/master/urpms && chmod a+x urpms && /urpms -g UnitedRPMs/gstreamer1 -s gstreamer1.spec -t unitedrpms-32-i386 -u true"   
 
 notifications:
 slack: unitedrpms:lzDykHTpajKrgmGz9NkrO1Hj
