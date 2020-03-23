@@ -7,24 +7,9 @@ python:
 
 install: true
 
-#build:
-#  pre_ci_boot:
-#    image_name: davidva/unibuild-31
-#    image_tag: latest
-#    pull: true
-#    env: LM=ML 
-#    options: "-e HOME=/root" 
-
-# commands in this section run inside your CI container. In addition, any commands such as ls, in this section can be used to skip default processing #for CI.
-#  ci:
-    # Here you'd place anything you want to test. 
-#    - rm -f /urpms
-#    - wget -c https://raw.githubusercontent.com/kuboosoft/united-build/master/urpms && chmod a+x urpms
-#    - /urpms -g UnitedRPMs/gstreamer1 -s gstreamer1.spec -t fedora-25-x86_64
-
 # the build scripts
 script:
-- docker run -v $(pwd):/root/ --privileged --cap-add=ALL davidva/unibuild-31 /bin/bash -c "rm -f urpms && wget -c https://raw.githubusercontent.com/kuboosoft/united-build/master/urpms && chmod a+x urpms && /urpms -g UnitedRPMs/gstreamer1 -s gstreamer1.spec -t unitedrpms-32-i386 -u true"   
+- docker run -v $(pwd):/root/ --privileged=true --cap-add=ALL --security-opt seccomp:unconfined davidva/unibuild-32 /bin/bash -c "rm -f urpms && wget -c https://raw.githubusercontent.com/kuboosoft/united-build/master/urpms && chmod a+x urpms && /urpms -g UnitedRPMs/gstreamer1 -s gstreamer1.spec -t unitedrpms-33-i386 -c true -u true"   
 
 notifications:
 slack: unitedrpms:lzDykHTpajKrgmGz9NkrO1Hj
