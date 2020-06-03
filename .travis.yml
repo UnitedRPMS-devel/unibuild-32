@@ -4,7 +4,7 @@ sudo: required
 services:
 - docker
 script:
-- travis_wait 32 && docker run -v $(pwd)/32:/root/enjoy/ --privileged=true --cap-add=ALL --security-opt seccomp:unconfined davidva/unibuild-32 /bin/sh -c "rm -f urpms && wget -c https://raw.githubusercontent.com/kuboosoft/united-build/master/urpms && chmod a+x urpms && /urpms -g UnitedRPMs/libva-intel-driver -s libva-intel-driver.spec -t unitedrpms-32-i386 -c true"
+- travis_wait 31 && docker run -v $(pwd)/31:/root/enjoy/ --privileged=true --cap-add=ALL --security-opt seccomp:unconfined davidva/unibuild-31 /bin/sh -c "rm -f urpms && wget -c https://raw.githubusercontent.com/kuboosoft/united-build/master/urpms && chmod a+x urpms && /urpms -g UnitedRPMs/libva-intel-driver -s libva-intel-driver.spec -t unitedrpms-31-i386 -c true"
 notifications:
 notifications:
   webhooks:

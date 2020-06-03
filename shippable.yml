@@ -9,7 +9,7 @@ install: true
 
 # the build scripts
 script:
-- docker run -v $(pwd)/31:/root/enjoy/ --privileged=true --cap-add=ALL --security-opt seccomp:unconfined davidva/unibuild-31 /bin/bash -c "rm -f urpms && wget -c https://raw.githubusercontent.com/kuboosoft/united-build/master/urpms && chmod a+x urpms && /urpms -g UnitedRPMs/libva-intel-driver -s libva-intel-driver.spec -t unitedrpms-31-i386 -c true"   
+- docker run -v $(pwd)/30:/root/enjoy/ --privileged=true --cap-add=ALL --security-opt seccomp:unconfined davidva/unibuild-30 /bin/bash -c "rm -f urpms && wget -c https://raw.githubusercontent.com/kuboosoft/united-build/master/urpms && chmod a+x urpms && /urpms -g UnitedRPMs/libva-intel-driver -s libva-intel-driver.spec -t unitedrpms-30-i386 -c true"   
 
 notifications:
 slack: unitedrpms:lzDykHTpajKrgmGz9NkrO1Hj
